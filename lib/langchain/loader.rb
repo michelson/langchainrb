@@ -86,7 +86,8 @@ module Langchain
     private
 
     def load_from_url
-      URI.parse(@path).open
+      # URI.parse(@path).open
+      URI.parse(URI::DEFAULT_PARSER.escape(@path)).open
     end
 
     def load_from_path
