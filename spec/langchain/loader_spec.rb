@@ -364,7 +364,7 @@ RSpec.describe Langchain::Loader do
     end
 
     context "with non ASCII chars URL" do
-      let(:path) { "https://exmaple.com/méxico" }
+      let(:path) { "https://example.com/méxico" }
 
       it { expect(subject).to be_truthy }
     end
